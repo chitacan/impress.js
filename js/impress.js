@@ -765,6 +765,7 @@
         // touch handler to detect taps on the left and right side of the screen
         // based on awesome work of @hakimel: https://github.com/hakimel/reveal.js
         document.addEventListener("touchstart", function ( event ) {
+            event.preventDefault(); // disable all touch events
             if (event.touches.length === 1) {
                 var x = event.touches[0].clientX,
                     width = window.innerWidth * 0.3,
